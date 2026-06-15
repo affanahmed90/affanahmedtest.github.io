@@ -208,6 +208,29 @@
       .cr { border-right: none; margin-right: 0; padding-right: 0; border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; }
       .cr:last-child { border-bottom: none; padding-bottom: 0; }
     }
+
+    /* NAV LOGO MARK */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .logo-mark {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px;
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--serif);
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 6px;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+      transition: opacity 0.15s;
+    }
+    .nav-logo:hover .logo-mark { opacity: 0.85; }
+    .logo-name {
+      font-family: var(--serif);
+      font-size: 1rem;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+    }
   </style>
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0CWV4BVNB"></script>
@@ -224,7 +247,7 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="#hero" class="nav-logo">Affan Akheel</a>
+    <a href="#hero" class="nav-logo"><span class="logo-mark">AA</span><span class="logo-name">Affan Akheel</span></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#cases">Case Studies</a></li>
@@ -596,7 +619,7 @@
   <div class="exp-inner container">
     <div class="exp-hdr">
       <div class="section-label">Experience</div>
-      <h2>8 years. One company. Seven roles.</h2>
+      <h2>A career built across every function of the business.</h2>
     </div>
     <div class="timeline">
       <div class="tl-item">
