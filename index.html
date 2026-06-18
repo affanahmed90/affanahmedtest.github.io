@@ -3,17 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Affan Akheel — Business Operator</title>
+  <title>Affan Akheel — eCommerce & Growth Leader</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0CWV4BVNB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J0CWV4BVNB');
+  </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --bg-1:     #FFFFFF;
-      --bg-2:     #F3F4F6;
-      --bg-dark:  #111827;
-      --bg-accent:#1D4ED8;
+      --bg:       #F9FAFB;
+      --white:    #FFFFFF;
       --ink:      #111827;
       --ink-2:    #374151;
       --ink-3:    #6B7280;
@@ -23,38 +29,39 @@
       --serif:    "Playfair Display", Georgia, serif;
       --sans:     "Inter", system-ui, sans-serif;
       --max:      1080px;
-      --text-max: 65ch;
+      --prose:    62ch;
     }
     html { scroll-behavior: smooth; font-size: 16px; }
-    body { font-family: var(--sans); background: var(--bg-1); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; }
     img { display: block; max-width: 100%; }
     a { color: inherit; text-decoration: none; }
 
-    /* PROGRESS */
     #progress { position: fixed; top: 0; left: 0; height: 2px; width: 0%; background: var(--accent); z-index: 200; transition: width 0.1s linear; }
 
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--rule); z-index: 100; }
     .nav-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 60px; padding: 0 2rem; }
-    .nav-logo { font-family: var(--serif); font-size: 1rem; color: var(--ink); }
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+    .logo-mark { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: var(--accent); color: #fff; font-family: var(--serif); font-size: 0.85rem; font-weight: 700; border-radius: 6px; flex-shrink: 0; transition: opacity 0.15s; }
+    .nav-logo:hover .logo-mark { opacity: 0.85; }
+    .logo-name { font-family: var(--serif); font-size: 1rem; color: var(--ink); }
     .nav-links { display: flex; gap: 1.75rem; list-style: none; }
     .nav-links a { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); padding-bottom: 2px; border-bottom: 1.5px solid transparent; transition: color 0.15s, border-color 0.15s; }
     .nav-links a:hover, .nav-links a.active { color: var(--ink); border-bottom-color: var(--accent); }
 
-    /* HELPERS */
     .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
     .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; }
 
-    /* ═══ HERO — bg-1 WHITE ═══ */
-    #hero { background: var(--bg-1); min-height: 100vh; display: flex; align-items: center; padding: 100px 2rem 80px; border-bottom: 1px solid var(--rule); }
+    /* HERO — white */
+    #hero { background: var(--white); min-height: 100vh; display: flex; align-items: center; padding: 100px 2rem 80px; border-bottom: 1px solid var(--rule); }
     .hero-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 260px; gap: 5rem; align-items: center; width: 100%; }
     .hero-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
     .hero-headline { font-family: var(--serif); font-size: clamp(3rem, 7vw, 5.5rem); line-height: 1.05; color: var(--ink); margin-bottom: 2rem; }
     .hero-headline .break { display: block; }
     .hero-headline .owner { display: block; font-style: italic; color: var(--accent); font-size: 0.72em; margin-top: 0.35em; }
-    .hero-tagline { font-size: 1.05rem; color: var(--ink-2); max-width: 480px; line-height: 1.7; margin-bottom: 2.5rem; }
+    .hero-tagline { font-size: 1.05rem; color: var(--ink-2); max-width: 480px; line-height: 1.75; margin-bottom: 2.5rem; }
     .hero-buttons { display: flex; gap: 0.875rem; margin-bottom: 4rem; }
-    .btn { display: inline-flex; align-items: center; font-size: 0.875rem; font-weight: 600; padding: 0.8rem 1.6rem; border-radius: 6px; cursor: pointer; transition: all 0.15s; letter-spacing: 0.01em; }
+    .btn { display: inline-flex; align-items: center; font-size: 0.875rem; font-weight: 600; padding: 0.8rem 1.6rem; border-radius: 6px; transition: all 0.15s; letter-spacing: 0.01em; }
     .btn-solid { background: var(--accent); color: #fff; border: 1.5px solid var(--accent); }
     .btn-solid:hover { background: #1e40af; border-color: #1e40af; transform: translateY(-1px); }
     .btn-outline { background: transparent; color: var(--ink-2); border: 1.5px solid var(--rule); }
@@ -66,40 +73,18 @@
     .hs-label { font-size: 0.72rem; font-weight: 500; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em; }
     .hero-photo { width: 260px; height: 320px; object-fit: cover; object-position: top center; border-radius: 10px; border: 1px solid var(--rule); }
 
-    /* ═══ GLANCE STRIP — accent blue ═══ */
-    #glance { background: var(--bg-accent); padding: 1rem 2rem; }
+    /* GLANCE — blue */
+    #glance { background: var(--accent); padding: 1rem 2rem; }
     .glance-inner { max-width: var(--max); margin: 0 auto; display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
     .glance-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.45); white-space: nowrap; }
     .glance-tags { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .glance-tag { font-size: 0.78rem; font-weight: 500; color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); padding: 0.25rem 0.875rem; border-radius: 100px; }
 
-    /* ═══ DIFFERENTIATOR — bg-2 GRAY ═══ */
-    #differentiator { background: var(--bg-2); padding: 7rem 2rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-    .diff-lead { font-family: var(--serif); font-size: clamp(1.5rem, 2.5vw, 2.1rem); line-height: 1.3; color: var(--ink); max-width: 700px; margin-bottom: 4rem; }
-    .diff-lead em { font-style: italic; color: var(--accent); }
-    .diff-pillars { display: grid; grid-template-columns: repeat(4,1fr); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; background: var(--bg-1); }
-    .diff-pillar { padding: 2rem 1.75rem; border-right: 1px solid var(--rule); transition: background 0.15s; }
-    .diff-pillar:hover { background: var(--bg-2); }
-    .diff-pillar:last-child { border-right: none; }
-    .diff-n { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.75rem; }
-    .diff-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.5rem; }
-    .diff-desc { font-size: 0.85rem; color: var(--ink-2); line-height: 1.65; }
-
-    /* ═══ TRANSFORMATIONS — dark ═══ */
-    #transformations { background: var(--bg-dark); padding: 6rem 2rem; }
-    .trans-eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1rem; }
-    .trans-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.5rem); color: #fff; margin-bottom: 3.5rem; line-height: 1.15; }
-    .trans-grid { display: grid; grid-template-columns: repeat(5,1fr); gap: 2.5rem 1.5rem; }
-    .trans-icon { font-size: 1.6rem; margin-bottom: 1rem; }
-    .trans-rule { width: 20px; height: 1px; background: rgba(255,255,255,0.15); margin-bottom: 1rem; }
-    .trans-t { font-size: 0.9rem; font-weight: 600; color: #fff; margin-bottom: 0.4rem; }
-    .trans-d { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.6; }
-
-    /* ═══ ABOUT — bg-1 WHITE ═══ */
-    #about { background: var(--bg-1); padding: 7rem 2rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    /* ABOUT — gray */
+    #about { background: var(--bg); padding: 7rem 2rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
     .about-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
     .about-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.4rem); line-height: 1.15; color: var(--ink); margin-bottom: 2rem; }
-    .about-text p { font-size: 0.975rem; color: var(--ink-2); line-height: 1.8; margin-bottom: 1.25rem; max-width: var(--text-max); }
+    .about-text p { font-size: 0.975rem; color: var(--ink-2); line-height: 1.8; margin-bottom: 1.25rem; max-width: var(--prose); }
     .about-text p strong { color: var(--ink); font-weight: 600; }
     .about-quote { margin-top: 2rem; padding: 1.25rem 1.5rem; border-left: 2px solid var(--accent); background: var(--accent-lt); border-radius: 0 6px 6px 0; }
     .about-quote p { font-size: 0.95rem; color: var(--accent); font-style: italic; line-height: 1.7; margin: 0; }
@@ -107,51 +92,81 @@
     .side-block { margin-bottom: 2.5rem; }
     .side-block h3 { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1rem; }
     .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .tag { font-size: 0.8rem; font-weight: 500; color: var(--ink-2); background: var(--bg-2); border: 1px solid var(--rule); padding: 0.35rem 0.875rem; border-radius: 100px; }
+    .tag { font-size: 0.8rem; font-weight: 500; color: var(--ink-2); background: var(--white); border: 1px solid var(--rule); padding: 0.35rem 0.875rem; border-radius: 100px; }
     .trusted-line { font-size: 0.95rem; color: var(--ink-2); font-style: italic; line-height: 1.65; padding-top: 2rem; border-top: 1px solid var(--rule); }
 
-    /* ═══ CASE STUDIES — bg-2 GRAY ═══ */
-    #cases { background: var(--bg-2); padding: 7rem 2rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    /* PHILOSOPHY — white */
+    #philosophy { background: var(--white); padding: 7rem 2rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .phil-inner { max-width: var(--max); margin: 0 auto; }
+    .phil-intro { font-size: 1rem; color: var(--ink-2); line-height: 1.8; max-width: var(--prose); margin-bottom: 3.5rem; }
+    .phil-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .phil-card { padding: 2rem; background: var(--bg); border: 1px solid var(--rule); border-radius: 10px; border-top: 3px solid var(--accent); }
+    .phil-card h3 { font-family: var(--serif); font-size: 1.1rem; font-style: italic; color: var(--ink); margin-bottom: 0.75rem; }
+    .phil-card p { font-size: 0.9rem; color: var(--ink-2); line-height: 1.72; }
+    .phil-summary { margin-top: 2.5rem; padding: 1.5rem 2rem; background: var(--accent-lt); border-left: 2px solid var(--accent); border-radius: 0 8px 8px 0; }
+    .phil-summary p { font-size: 0.975rem; color: var(--ink-2); line-height: 1.8; max-width: var(--prose); }
+    .phil-summary p strong { color: var(--ink); font-weight: 600; }
+
+    /* OPERATING SYSTEM — dark */
+    #operating { background: var(--ink); padding: 7rem 2rem; }
+    .op-inner { max-width: var(--max); margin: 0 auto; }
+    .op-eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
+    .op-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.5rem); color: #fff; margin-bottom: 1rem; line-height: 1.15; }
+    .op-intro { font-size: 1rem; color: rgba(255,255,255,0.55); line-height: 1.75; max-width: var(--prose); margin-bottom: 3.5rem; }
+    .op-levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .op-level { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 2rem; }
+    .op-level-num { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .op-level h3 { font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 1.25rem; padding-bottom: 0.875rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .op-metric { font-size: 0.82rem; color: rgba(255,255,255,0.55); padding: 0.3rem 0; display: flex; align-items: flex-start; gap: 0.5rem; }
+    .op-metric::before { content: "\2022"; color: var(--accent); flex-shrink: 0; }
+    .op-footer { margin-top: 2.5rem; padding: 1.5rem 2rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; }
+    .op-footer p { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.72; max-width: var(--prose); }
+    .op-footer strong { color: rgba(255,255,255,0.8); font-weight: 500; }
+
+    /* CASE STUDIES — gray */
+    #cases { background: var(--bg); padding: 7rem 2rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
     .cases-inner { max-width: var(--max); margin: 0 auto; }
     .cases-hdr { margin-bottom: 3.5rem; }
     .cases-hdr h2 { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.5rem); color: var(--ink); line-height: 1.15; margin-bottom: 0.75rem; }
     .cases-hdr p { font-size: 1rem; color: var(--ink-3); max-width: 480px; }
-    .case-item { background: var(--bg-1); border: 1px solid var(--rule); border-radius: 10px; margin-bottom: 1rem; overflow: hidden; }
+    .case-item { background: var(--white); border: 1px solid var(--rule); border-radius: 10px; margin-bottom: 1rem; overflow: hidden; }
     .case-head { display: flex; align-items: center; justify-content: space-between; padding: 1.75rem 2rem; cursor: pointer; gap: 1.5rem; transition: background 0.15s; }
-    .case-head:hover { background: var(--bg-2); }
+    .case-head:hover { background: var(--bg); }
     .case-head-left { flex: 1; }
     .case-cat { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
     .case-head h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--ink); line-height: 1.25; }
     .case-chevron { width: 28px; height: 28px; border: 1.5px solid var(--rule); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform 0.2s, border-color 0.15s; color: var(--ink-3); font-size: 1rem; }
     .case-item.open .case-chevron { transform: rotate(45deg); border-color: var(--accent); color: var(--accent); }
     .case-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .case-body-inner { padding: 0 2rem 2rem; border-top: 1px solid var(--rule); }
-    .case-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding-top: 2rem; margin-bottom: 2rem; }
-    .case-col h4 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.75rem; }
-    .case-col p { font-size: 0.9rem; color: var(--ink-2); line-height: 1.72; max-width: var(--text-max); }
+    .case-body-inner { padding: 0 2rem 2.5rem; border-top: 1px solid var(--rule); }
+
+    /* Inside case — two column */
+    .case-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; padding-top: 2rem; margin-bottom: 2rem; }
+    .case-col h4 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.875rem; }
+    .case-col p { font-size: 0.9rem; color: var(--ink-2); line-height: 1.75; max-width: var(--prose); }
     .case-col ul { list-style: none; padding: 0; }
-    .case-col ul li { font-size: 0.9rem; color: var(--ink-2); line-height: 1.7; padding-left: 1.25rem; position: relative; margin-bottom: 0.3rem; }
+    .case-col ul li { font-size: 0.9rem; color: var(--ink-2); line-height: 1.7; padding-left: 1.25rem; position: relative; margin-bottom: 0.4rem; }
     .case-col ul li::before { content: "\2192"; position: absolute; left: 0; color: var(--accent); font-size: 0.78rem; top: 3px; }
-    .case-results { display: flex; gap: 0; padding: 1.5rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-bottom: 1.5rem; }
-    .cr { flex: 1; padding-right: 2rem; border-right: 1px solid var(--rule); margin-right: 2rem; }
-    .cr:last-child { border-right: none; margin-right: 0; padding-right: 0; }
-    .cr-n { font-family: var(--serif); font-size: 2.25rem; line-height: 1; color: var(--ink); margin-bottom: 0.3rem; }
-    .cr-l { font-size: 0.72rem; font-weight: 500; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em; }
-    .case-lesson { font-size: 0.9rem; color: var(--ink-3); font-style: italic; line-height: 1.65; }
 
-    /* ═══ PHILOSOPHY — bg-1 WHITE ═══ */
-    #philosophy { background: var(--bg-1); padding: 7rem 2rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-    .phil-inner { max-width: var(--max); margin: 0 auto; }
-    .phil-hdr { margin-bottom: 4rem; }
-    .phil-hdr h2 { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.5rem); color: var(--ink); line-height: 1.15; }
-    .phil-item { display: grid; grid-template-columns: 56px 1fr; gap: 2rem; align-items: start; padding: 2.5rem 0; border-bottom: 1px solid var(--rule); }
-    .phil-item:first-of-type { border-top: 1px solid var(--rule); }
-    .phil-n { font-family: var(--serif); font-size: 1.25rem; color: var(--rule); line-height: 1; padding-top: 6px; }
-    .phil-q { font-family: var(--serif); font-size: clamp(1.1rem, 2vw, 1.35rem); font-style: italic; color: var(--ink); margin-bottom: 0.75rem; line-height: 1.3; }
-    .phil-p { font-size: 0.9rem; color: var(--ink-2); line-height: 1.72; max-width: 600px; }
+    /* Impact row */
+    .case-impact { display: flex; gap: 0; padding: 1.75rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-bottom: 1.75rem; flex-wrap: wrap; }
+    .ci { flex: 1; min-width: 100px; padding-right: 1.5rem; border-right: 1px solid var(--rule); margin-right: 1.5rem; }
+    .ci:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+    .ci-n { font-family: var(--serif); font-size: 1.85rem; line-height: 1; color: var(--ink); margin-bottom: 0.3rem; }
+    .ci-l { font-size: 0.72rem; font-weight: 500; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.4; }
 
-    /* ═══ EXPERIENCE — bg-2 GRAY ═══ */
-    #experience { background: var(--bg-2); padding: 7rem 2rem; border-top: 1px solid var(--rule); }
+    /* Tools row */
+    .case-tools { margin-bottom: 1.75rem; }
+    .case-tools h4 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.75rem; }
+    .tool-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tool-pill { font-size: 0.75rem; font-weight: 500; color: var(--ink-2); background: var(--bg); border: 1px solid var(--rule); padding: 0.3rem 0.75rem; border-radius: 100px; }
+
+    /* Takeaway */
+    .case-takeaway { padding: 1.25rem 1.5rem; background: var(--accent-lt); border-left: 2px solid var(--accent); border-radius: 0 6px 6px 0; }
+    .case-takeaway p { font-size: 0.9rem; color: var(--accent); font-style: italic; line-height: 1.65; margin: 0; }
+
+    /* EXPERIENCE — white */
+    #experience { background: var(--white); padding: 7rem 2rem; border-top: 1px solid var(--rule); }
     .exp-inner { max-width: var(--max); margin: 0 auto; }
     .exp-hdr { margin-bottom: 4rem; }
     .exp-hdr h2 { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.5rem); color: var(--ink); line-height: 1.15; }
@@ -169,8 +184,8 @@
     .edu-block h3 { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1rem; }
     .edu-block p { font-size: 0.9rem; color: var(--ink-2); line-height: 2; }
 
-    /* ═══ CONTACT — dark ═══ */
-    #contact { background: var(--bg-dark); padding: 9rem 2rem; text-align: center; }
+    /* CONTACT — dark */
+    #contact { background: var(--ink); padding: 9rem 2rem; text-align: center; }
     .contact-inner { max-width: 520px; margin: 0 auto; }
     .contact-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
     .contact-title { font-family: var(--serif); font-size: clamp(2rem, 5vw, 3.5rem); color: #fff; line-height: 1.1; margin-bottom: 1.25rem; }
@@ -181,65 +196,68 @@
     .btn-dark-outline { background: transparent; color: rgba(255,255,255,0.75); border: 1.5px solid rgba(255,255,255,0.2); }
     .btn-dark-outline:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
 
-    /* FOOTER */
-    footer { padding: 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; background: var(--bg-dark); }
+    footer { padding: 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; background: var(--ink); }
     footer p { font-size: 0.75rem; color: rgba(255,255,255,0.2); }
 
-    /* RESPONSIVE */
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-photo { display: none; }
-      .diff-pillars { grid-template-columns: 1fr 1fr; }
-      .trans-grid { grid-template-columns: repeat(3,1fr); }
-      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .about-right { padding-top: 0; }
+      .hero-inner { grid-template-columns: 1fr; } .hero-photo { display: none; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; } .about-right { padding-top: 0; }
+      .op-levels { grid-template-columns: 1fr; }
+      .phil-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 640px) {
-      .nav-links { display: none; }
-      .hero-stats { flex-direction: column; gap: 1.5rem; }
+        .hero-stats { flex-direction: column; gap: 1.5rem; }
       .hs { border-right: none; margin-right: 0; padding-right: 0; border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; }
       .hs:last-child { border-bottom: none; padding-bottom: 0; }
-      .diff-pillars { grid-template-columns: 1fr; }
-      .diff-pillar { border-right: none; border-bottom: 1px solid var(--rule); }
-      .diff-pillar:last-child { border-bottom: none; }
-      .trans-grid { grid-template-columns: 1fr 1fr; }
       .case-cols { grid-template-columns: 1fr; }
-      .case-results { flex-direction: column; gap: 1.5rem; }
-      .cr { border-right: none; margin-right: 0; padding-right: 0; border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; }
-      .cr:last-child { border-bottom: none; padding-bottom: 0; }
+      .case-impact { flex-direction: column; gap: 1.25rem; }
+      .ci { border-right: none; margin-right: 0; padding-right: 0; border-bottom: 1px solid var(--rule); padding-bottom: 1.25rem; }
+      .ci:last-child { border-bottom: none; padding-bottom: 0; }
     }
 
-    /* NAV LOGO MARK */
-    .nav-logo { display: inline-flex; align-items: center; gap: 0.6rem; text-decoration: none; }
-    .logo-mark {
-      display: inline-flex; align-items: center; justify-content: center;
-      width: 32px; height: 32px;
-      background: var(--accent);
-      color: #fff;
-      font-family: var(--serif);
-      font-size: 0.85rem;
-      font-weight: 700;
-      border-radius: 6px;
-      letter-spacing: -0.5px;
-      flex-shrink: 0;
-      transition: opacity 0.15s;
+    /* HAMBURGER & MOBILE MENU */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
     }
-    .nav-logo:hover .logo-mark { opacity: 0.85; }
-    .logo-name {
-      font-family: var(--serif);
-      font-size: 1rem;
-      color: var(--ink);
-      letter-spacing: 0.01em;
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--ink);
+      transition: all 0.2s;
+    }
+    .nav-mobile {
+      display: none;
+      background: var(--white);
+      border-top: 1px solid var(--rule);
+      padding: 0.5rem 0 1rem;
+    }
+    .nav-mobile.open { display: block; }
+    .nav-mobile ul { list-style: none; padding: 0; }
+    .nav-mobile ul li a {
+      display: block;
+      padding: 0.875rem 2rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink-2);
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-mobile ul li:last-child a { border-bottom: none; }
+    .nav-mobile ul li a:hover { background: var(--bg); color: var(--accent); }
+    @media (max-width: 640px) {
+      .nav-hamburger { display: flex; }
+      .nav-links { display: none !important; }
     }
   </style>
-<!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J0CWV4BVNB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-J0CWV4BVNB');
-  </script>
 </head>
 <body>
 
@@ -247,32 +265,50 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="#hero" class="nav-logo"><span class="logo-mark">AA</span><span class="logo-name">Affan Akheel</span></a>
+    <a href="#hero" class="nav-logo">
+      <span class="logo-mark">AA</span>
+      <span class="logo-name">Affan Akheel</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#cases">Case Studies</a></li>
       <li><a href="#philosophy">Philosophy</a></li>
+      <li><a href="#operating">Operating System</a></li>
+      <li><a href="#cases">Case Studies</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div class="nav-mobile" id="navMobile">
+    <ul>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#philosophy" onclick="closeMenu()">Philosophy</a></li>
+      <li><a href="#operating" onclick="closeMenu()">Operating System</a></li>
+      <li><a href="#cases" onclick="closeMenu()">Case Studies</a></li>
+      <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- HERO — WHITE -->
+<!-- HERO -->
 <section id="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-label">Business Operator</div>
+      <div class="hero-label">eCommerce &amp; Growth Leader</div>
       <h1 class="hero-headline">
         <span class="break">Growth.</span>
         <span class="break">Operations.</span>
         <span class="break">Systems.</span>
         <span class="owner">One owner.</span>
       </h1>
-      <p class="hero-tagline">I help founder-led and growth-stage companies scale revenue, operations, technology, and teams &mdash; without creating unnecessary complexity.</p>
+      <p class="hero-tagline">I build profitable ecommerce businesses by aligning commercial strategy, marketing, systems, operations and leadership.</p>
       <div class="hero-buttons">
         <a href="#contact" class="btn btn-solid">Get in touch</a>
-        <a href="#cases" class="btn btn-outline">See transformations</a>
+        <a href="#cases" class="btn btn-outline">See case studies</a>
       </div>
       <div class="hero-stats">
         <div class="hs"><div class="hs-num">$3M+</div><div class="hs-label">Brand Built</div></div>
@@ -286,103 +322,34 @@
   </div>
 </section>
 
-<!-- GLANCE STRIP — BLUE -->
+<!-- GLANCE -->
 <div id="glance">
   <div class="glance-inner">
     <span class="glance-label">Specialties</span>
     <div class="glance-tags">
-      <span class="glance-tag">Revenue Operations</span>
-      <span class="glance-tag">eCommerce</span>
-      <span class="glance-tag">ERP &amp; Systems</span>
-      <span class="glance-tag">Supply Chain</span>
-      <span class="glance-tag">Team Leadership</span>
+      <span class="glance-tag">eCommerce Strategy</span>
+      <span class="glance-tag">Revenue &amp; P&amp;L Ownership</span>
+      <span class="glance-tag">Performance Marketing</span>
+      <span class="glance-tag">Operations Leadership</span>
+      <span class="glance-tag">Platform &amp; Technology</span>
+      <span class="glance-tag">Team Building</span>
       <span class="glance-tag">International Expansion</span>
-      <span class="glance-tag">AI Implementation</span>
     </div>
   </div>
 </div>
 
-<!-- DIFFERENTIATOR — GRAY -->
-<section id="differentiator">
-  <div class="container">
-    <p class="diff-lead">Most eCommerce leaders specialize in <em>one area.</em> Marketing. Operations. Technology. Supply chain. I have spent my career owning all four.</p>
-    <div class="diff-pillars">
-      <div class="diff-pillar">
-        <div class="diff-n">01</div>
-        <div class="diff-title">Revenue &amp; Growth</div>
-        <div class="diff-desc">Full P&amp;L ownership, paid media, lifecycle marketing, CRO, and conversion optimization.</div>
-      </div>
-      <div class="diff-pillar">
-        <div class="diff-n">02</div>
-        <div class="diff-title">Operations</div>
-        <div class="diff-desc">Fulfillment, supply chain, 3PL management, SOPs, and cross-functional execution.</div>
-      </div>
-      <div class="diff-pillar">
-        <div class="diff-n">03</div>
-        <div class="diff-title">Technology</div>
-        <div class="diff-desc">Platform product ownership, ERP integration, dev team leadership, and AI implementation.</div>
-      </div>
-      <div class="diff-pillar">
-        <div class="diff-n">04</div>
-        <div class="diff-title">People &amp; Teams</div>
-        <div class="diff-desc">Built 20+ person organizations from scratch. Led turnarounds. Developed leaders.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TRANSFORMATIONS — DARK -->
-<section id="transformations">
-  <div class="container">
-    <div class="trans-eyebrow">Business Transformations</div>
-    <h2 class="trans-title">What I have built</h2>
-    <div class="trans-grid">
-      <div class="trans-item">
-        <div class="trans-icon">&#128200;</div>
-        <div class="trans-rule"></div>
-        <div class="trans-t">Revenue Growth</div>
-        <div class="trans-d">Scaled Game Theory Tables from zero to $3M+ in under two years.</div>
-      </div>
-      <div class="trans-item">
-        <div class="trans-icon">&#9881;&#65039;</div>
-        <div class="trans-rule"></div>
-        <div class="trans-t">Operational Excellence</div>
-        <div class="trans-d">Rebuilt fulfillment operations to 99%+ on-time and accuracy.</div>
-      </div>
-      <div class="trans-item">
-        <div class="trans-icon">&#128187;</div>
-        <div class="trans-rule"></div>
-        <div class="trans-t">Technology Modernization</div>
-        <div class="trans-d">Led ERP and custom platform rebuild as product owner.</div>
-      </div>
-      <div class="trans-item">
-        <div class="trans-icon">&#128101;</div>
-        <div class="trans-rule"></div>
-        <div class="trans-t">Team Building</div>
-        <div class="trans-d">Built a 20+ person cross-functional organization from scratch.</div>
-      </div>
-      <div class="trans-item">
-        <div class="trans-icon">&#127758;</div>
-        <div class="trans-rule"></div>
-        <div class="trans-t">International Expansion</div>
-        <div class="trans-d">Launched new markets delivering 100% YoY revenue growth.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT — WHITE -->
+<!-- ABOUT -->
 <section id="about">
   <div class="about-grid container">
     <div class="about-text">
       <div class="section-label">About</div>
       <h2 class="about-title">Operator. Builder. Integrator.</h2>
-      <p>I&apos;m a Las Vegas-based business operator with 8 years of experience building DTC companies from the ground up. My background is unusual &mdash; I sit at the intersection of <strong>commercial ownership, technical depth, and operational leadership.</strong> I don&apos;t specialize in one function. I own all of them.</p>
-      <p>At Uniworld Omniport, I serve as Director of eCommerce and product owner of a custom-built platform, directly managing engineers while simultaneously owning the P&amp;L, marketing, operations, supply chain, and international expansion.</p>
-      <p>I launched Game Theory Tables from zero to seven figures in under two years. I stepped in to lead the operations team through a critical turnaround &mdash; shipping $2M+ of orders in 90 days when the business needed it most.</p>
+      <p>I&apos;m a Las Vegas-based eCommerce and growth leader with 8 years of experience building DTC businesses from the ground up. My background sits at the intersection of <strong>commercial strategy, marketing, operations, and technology</strong> &mdash; I don&apos;t run one department. I own the business.</p>
+      <p>At Uniworld Omniport, I serve as Director of eCommerce and product owner of a custom-built platform, managing engineers while owning the P&amp;L, marketing, operations, supply chain, and international expansion simultaneously.</p>
+      <p>I launched Game Theory Tables from zero to seven figures in under two years. I stepped in to lead the operations team through a critical turnaround &mdash; shipping $2M+ of orders in 90 days. I&apos;ve built teams, systems, and growth engines from scratch across every function of the business.</p>
       <p>MBA in Marketing. MS in Engineering Management. Background in electronics engineering. Equally comfortable in a strategy meeting, a development sprint, and a warehouse floor.</p>
       <div class="about-quote">
-        <p>&ldquo;I solve the problems that appear after product-market fit &mdash; when growth begins to outpace systems.&rdquo;</p>
+        <p>&ldquo;I build profitable ecommerce businesses by aligning commercial strategy, marketing, systems, operations and leadership around one shared objective: sustainable growth.&rdquo;</p>
       </div>
     </div>
     <div class="about-right">
@@ -395,7 +362,6 @@
           <span class="tag">Home Goods</span>
           <span class="tag">International Commerce</span>
           <span class="tag">B2B &amp; Wholesale</span>
-          <span class="tag">Marketplace</span>
           <span class="tag">High-AOV Products</span>
         </div>
       </div>
@@ -422,17 +388,92 @@
   </div>
 </section>
 
-<!-- CASE STUDIES — GRAY -->
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="phil-inner container">
+    <div class="section-label">Operating Philosophy</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.75rem,3vw,2.5rem);color:var(--ink);line-height:1.15;margin-bottom:1.5rem;">My Operating Philosophy</h2>
+    <p class="phil-intro">I&apos;ve found that businesses rarely struggle because of a single problem. More often, growth stalls because one of four foundational pillars is missing: the right people, the right systems, the right culture, or the right data. Every challenge I take on &mdash; whether launching a new brand, rebuilding operations, improving marketing performance, or implementing new technology &mdash; is approached through these four lenses.</p>
+    <div class="phil-grid">
+      <div class="phil-card">
+        <h3>People create momentum.</h3>
+        <p>The right talent creates forward motion. The wrong talent creates friction. My first priority is ensuring teams have clear ownership, accountability, and the support to succeed.</p>
+      </div>
+      <div class="phil-card">
+        <h3>Systems create consistency.</h3>
+        <p>Great people should not have to rely on heroics to produce great results. Systems remove friction and allow organizations to scale without burning out the people inside them.</p>
+      </div>
+      <div class="phil-card">
+        <h3>Culture determines sustainability.</h3>
+        <p>Culture is not what you write on the wall &mdash; it&apos;s the behaviors your systems reinforce every day. The right culture creates accountability, ownership, and continuous improvement.</p>
+      </div>
+      <div class="phil-card">
+        <h3>Data creates clarity.</h3>
+        <p>Leadership decisions should be driven by measurable business outcomes. Clear scorecards, defined ownership and transparent metrics create accountability without micromanagement.</p>
+      </div>
+    </div>
+    <div class="phil-summary">
+      <p>When <strong>people, systems, culture and data</strong> work together, profitable growth becomes the natural outcome &mdash; not the objective. Most organizations try to solve business problems by fixing only one layer. Lasting businesses are built when all four reinforce one another.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OPERATING SYSTEM -->
+<section id="operating">
+  <div class="op-inner container">
+    <div class="op-eyebrow">How I Run an eCommerce Business</div>
+    <h2 class="op-title">A Three-Level Operating Dashboard</h2>
+    <p class="op-intro">Growing an ecommerce business isn&apos;t about managing Marketing, Operations, Technology and Customer Experience independently. It&apos;s about aligning every department around one objective: profitable growth. I use a three-level dashboard framework to create visibility, accountability and alignment across the entire business.</p>
+    <div class="op-levels">
+      <div class="op-level">
+        <div class="op-level-num">Level 1</div>
+        <h3>Executive Dashboard</h3>
+        <div class="op-metric">Revenue</div>
+        <div class="op-metric">International Revenue</div>
+        <div class="op-metric">Advertising Spend</div>
+        <div class="op-metric">Customer Acquisition Cost</div>
+        <div class="op-metric">Contribution Margin</div>
+        <div class="op-metric">Organic Growth</div>
+        <div class="op-metric">On-Time Delivery</div>
+        <div class="op-metric">Order Accuracy</div>
+      </div>
+      <div class="op-level">
+        <div class="op-level-num">Level 2</div>
+        <h3>Department Dashboards</h3>
+        <div class="op-metric">Marketing &mdash; ROAS, CAC, Email, Attribution</div>
+        <div class="op-metric">eCommerce &mdash; CVR, AOV, Funnel, SEO</div>
+        <div class="op-metric">Operations &mdash; Accuracy, Inventory, OTD</div>
+        <div class="op-metric">Technology &mdash; Uptime, Velocity, Stability</div>
+      </div>
+      <div class="op-level">
+        <div class="op-level-num">Level 3</div>
+        <h3>Operational Metrics</h3>
+        <div class="op-metric">Site Speed &amp; Uptime</div>
+        <div class="op-metric">Development Velocity</div>
+        <div class="op-metric">Warehouse Productivity</div>
+        <div class="op-metric">Inventory Audit Accuracy</div>
+        <div class="op-metric">QA Completion</div>
+        <div class="op-metric">Maintenance Logs</div>
+      </div>
+    </div>
+    <div class="op-footer">
+      <p>This framework creates <strong>accountability without micromanagement</strong>. When a Level 1 KPI changes, we trace it back through department and operational metrics to identify root cause quickly. <strong>People execute. Systems create consistency. Data creates clarity.</strong> Together, they drive profitable growth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
 <section id="cases">
   <div class="cases-inner container">
     <div class="cases-hdr">
-      <div class="section-label">Business Transformations</div>
-      <h2>Real problems. Real decisions. Real outcomes.</h2>
-      <p>Five engagements across leadership, growth, operations, technology, and expansion.</p>
+      <div class="section-label">Business Case Studies</div>
+      <h2>How I solve business problems.</h2>
+      <p>Five engagements across commercial strategy, leadership, growth, customer experience, and systems.</p>
     </div>
 
+    <!-- CASE 1 -->
     <div class="case-item" id="c1">
-      <div class="case-head" onclick="toggleCase(&apos;c1&apos;)">
+      <div class="case-head" onclick="toggleCase('c1')">
         <div class="case-head-left">
           <div class="case-cat">Commercial Strategy</div>
           <h3>From Product Concept to Multi-Million Dollar Business</h3>
@@ -443,69 +484,47 @@
         <div class="case-body-inner">
           <div class="case-cols">
             <div class="case-col">
-              <h4>Business Problem</h4>
-              <p>Launching a completely new product category carried significant commercial risk. While adjacent to our existing business, there was no validated demand, no proven go-to-market strategy, and no evidence the product could scale profitably.</p>
-              <p>Rather than committing substantial inventory and marketing investment upfront, our objective was to validate demand, refine the customer experience, and build confidence before scaling.</p>
+              <h4>Business Challenge</h4>
+              <p>Launching an entirely new product category with no proven demand while minimizing financial risk and validating whether the opportunity justified long-term investment.</p>
             </div>
             <div class="case-col">
               <h4>Strategic Decisions</h4>
               <ul>
-                <li>Validated demand with a limited 50-unit production run before committing to large-scale manufacturing</li>
-                <li>Delayed Kickstarter after a competitor&apos;s record-breaking campaign saturated the market, choosing better timing over immediate execution</li>
-                <li>Created a Kickstarter-style campaign on our own website to validate repeatability while collecting first-party data, reviews, photography, and UGC</li>
-                <li>Used early customer feedback and social proof to strengthen future marketing before investing in large-scale acquisition</li>
-                <li>Transitioned from crowdfunding into a sustainable DTC ecommerce business rather than relying on perpetual preorder campaigns</li>
+                <li>Built a premium product experience unlike existing products</li>
+                <li>Manufactured only 50 units to validate demand before scaling</li>
+                <li>Launched an exclusive early adopter campaign to test acquisition</li>
+                <li>Created a Kickstarter-style campaign on our own site to validate repeatability</li>
+                <li>Built social proof through reviews and UGC before scaling investment</li>
+                <li>Launched Kickstarter only after validating demand twice</li>
+                <li>Transitioned from crowdfunding into a sustainable DTC business</li>
               </ul>
             </div>
           </div>
-          <div class="case-results">
-            <div class="cr"><div class="cr-n">$3M+</div><div class="cr-l">Revenue Generated</div></div>
-            <div class="cr"><div class="cr-n">50&#8594;800</div><div class="cr-l">Validated Scaling Model</div></div>
-            <div class="cr"><div class="cr-n">3</div><div class="cr-l">Successful Launches</div></div>
-            <div class="cr"><div class="cr-n">&#10003;</div><div class="cr-l">Sustainable DTC Brand</div></div>
+          <div class="case-impact">
+            <div class="ci"><div class="ci-n">50</div><div class="ci-l">Units sold in under 2 months</div></div>
+            <div class="ci"><div class="ci-n">300+</div><div class="ci-l">Units sold in 40 days</div></div>
+            <div class="ci"><div class="ci-n">800+</div><div class="ci-l">Kickstarter units in 30 days</div></div>
+            <div class="ci"><div class="ci-n">$3M+</div><div class="ci-l">Multi-million dollar brand built</div></div>
           </div>
-          <p class="case-lesson">Rather than scaling assumptions, we scaled confidence. Every launch was intentionally designed to reduce uncertainty before increasing inventory, marketing investment, or operational complexity.</p>
+          <div class="case-tools">
+            <h4>Tools &amp; Platforms</h4>
+            <div class="tool-pills">
+              <span class="tool-pill">Meta Ads</span><span class="tool-pill">Google Ads</span><span class="tool-pill">Shopify</span><span class="tool-pill">Email Marketing</span><span class="tool-pill">Kickstarter</span><span class="tool-pill">UGC</span><span class="tool-pill">Landing Pages</span>
+            </div>
+          </div>
+          <div class="case-takeaway">
+            <p>Validate before scaling. Every stage reduced risk while increasing confidence, allowing investment to follow proven customer demand rather than assumptions.</p>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- CASE 2 -->
     <div class="case-item" id="c2">
-      <div class="case-head" onclick="toggleCase(&apos;c2&apos;)">
-        <div class="case-head-left">
-          <div class="case-cat">Growth Strategy</div>
-          <h3>Building a High-Performance Growth Engine</h3>
-        </div>
-        <div class="case-chevron">+</div>
-      </div>
-      <div class="case-body">
-        <div class="case-body-inner">
-          <div class="case-cols">
-            <div class="case-col">
-              <h4>Business Problem</h4>
-              <p>This case study covers transforming an unprofitable customer acquisition engine into a scalable, profitable growth system across paid media, lifecycle marketing, CRO, and attribution.</p>
-              <p style="font-size:0.82rem; color:var(--ink-3); font-style:italic; margin-top:0.75rem;">Full case study coming soon.</p>
-            </div>
-            <div class="case-col">
-              <h4>Growth Strategy</h4>
-              <p style="font-size:0.82rem; color:var(--ink-3); font-style:italic;">Full case study coming soon.</p>
-            </div>
-          </div>
-          <div class="case-results">
-            <div class="cr"><div class="cr-n">7x</div><div class="cr-l">ROAS achieved</div></div>
-            <div class="cr"><div class="cr-n">30%</div><div class="cr-l">CAC reduction</div></div>
-            <div class="cr"><div class="cr-n">38%</div><div class="cr-l">CVR improvement</div></div>
-            <div class="cr"><div class="cr-n">44%</div><div class="cr-l">Email &amp; SMS revenue YoY</div></div>
-          </div>
-          <p class="case-lesson">Coming soon.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="case-item" id="c3">
-      <div class="case-head" onclick="toggleCase(&apos;c3&apos;)">
+      <div class="case-head" onclick="toggleCase('c2')">
         <div class="case-head-left">
           <div class="case-cat">Leadership</div>
-          <h3>Operations Turnaround Under Financial Pressure</h3>
+          <h3>Rebuilding Operations for Scale</h3>
         </div>
         <div class="case-chevron">+</div>
       </div>
@@ -513,37 +532,47 @@
         <div class="case-body-inner">
           <div class="case-cols">
             <div class="case-col">
-              <h4>Business Problem</h4>
-              <p>Entering the final quarter of the year, the business faced a critical operational challenge. More than $2M in customer orders needed to be fulfilled within 90 days, and failure would have resulted in year-end losses due to unrecognized revenue.</p>
-              <p>The Operations Manager had recently been let go, leaving a seven-person team without clear leadership, defined processes, measurable goals, or accountability. The immediate challenge wasn&apos;t capacity &mdash; it was creating alignment and execution under extreme time pressure.</p>
+              <h4>Business Challenge</h4>
+              <p>Inherited an underperforming operations team during the company&apos;s most important fulfillment period. More than $2M in orders needed to ship within 90 days. Failure would have jeopardized year-end profitability. The Operations Manager had been let go, leaving a seven-person team without leadership, processes, goals, or accountability.</p>
             </div>
             <div class="case-col">
               <h4>Leadership Approach</h4>
               <ul>
-                <li>Diagnosed the operation before introducing change, identifying root causes rather than reacting to symptoms</li>
-                <li>Unified the team around a single measurable objective with clear ownership and accountability</li>
-                <li>Introduced KPIs, repeatable workflows, and daily operating rhythms to create clarity</li>
-                <li>Implemented performance incentives tied directly to business outcomes</li>
-                <li>Stabilized execution while simultaneously designing the long-term organizational rebuild</li>
+                <li>Evaluated people, processes and bottlenecks before making changes</li>
+                <li>Established goals, accountability and clear ownership immediately</li>
+                <li>Introduced repeatable workflows and daily operating rhythms</li>
+                <li>Implemented KPI scorecards tied directly to business outcomes</li>
+                <li>Created performance incentives aligned to the shipment target</li>
+                <li>Rebuilt team culture around ownership and execution</li>
+                <li>Simultaneously planned the long-term organizational rebuild</li>
               </ul>
             </div>
           </div>
-          <div class="case-results">
-            <div class="cr"><div class="cr-n">$2M+</div><div class="cr-l">Orders Fulfilled</div></div>
-            <div class="cr"><div class="cr-n">99%</div><div class="cr-l">On-Time Delivery</div></div>
-            <div class="cr"><div class="cr-n">98%</div><div class="cr-l">Fulfillment Accuracy</div></div>
-            <div class="cr"><div class="cr-n">$0</div><div class="cr-l">Year-End Losses</div></div>
+          <div class="case-impact">
+            <div class="ci"><div class="ci-n">$2M+</div><div class="ci-l">Orders fulfilled in 90 days</div></div>
+            <div class="ci"><div class="ci-n">99%</div><div class="ci-l">On-time delivery</div></div>
+            <div class="ci"><div class="ci-n">98%</div><div class="ci-l">Order accuracy</div></div>
+            <div class="ci"><div class="ci-n">$0</div><div class="ci-l">Year-end losses avoided</div></div>
           </div>
-          <p class="case-lesson">Great turnarounds begin with diagnosis, not action. Sustainable performance comes from aligning people, systems, and accountability around a shared objective &mdash; not simply asking teams to work harder.</p>
+          <div class="case-tools">
+            <h4>Tools &amp; Platforms</h4>
+            <div class="tool-pills">
+              <span class="tool-pill">ERP</span><span class="tool-pill">Dashboards</span><span class="tool-pill">Inventory Systems</span><span class="tool-pill">KPI Scorecards</span><span class="tool-pill">SOPs</span>
+            </div>
+          </div>
+          <div class="case-takeaway">
+            <p>Operations problems are rarely process problems alone. Sustainable performance comes from aligning people, systems and culture around a shared objective.</p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="case-item" id="c4">
-      <div class="case-head" onclick="toggleCase(&apos;c4&apos;)">
+    <!-- CASE 3 -->
+    <div class="case-item" id="c3">
+      <div class="case-head" onclick="toggleCase('c3')">
         <div class="case-head-left">
-          <div class="case-cat">Systems &amp; Transformation</div>
-          <h3>Building Systems That Scale</h3>
+          <div class="case-cat">Growth Strategy</div>
+          <h3>Building a Predictable Growth Engine</h3>
         </div>
         <div class="case-chevron">+</div>
       </div>
@@ -551,22 +580,133 @@
         <div class="case-body-inner">
           <div class="case-cols">
             <div class="case-col">
-              <h4>Business Problem</h4>
-              <p>This case study covers ERP implementation, CMS migration, process redesign, automation, developer leadership, and creating scalable operating systems.</p>
-              <p style="font-size:0.82rem; color:var(--ink-3); font-style:italic; margin-top:0.75rem;">Full case study coming soon.</p>
+              <h4>Business Challenge</h4>
+              <p>Marketing relied primarily on organic traffic and occasional boosted social posts. There was no structured paid acquisition strategy capable of scaling customer acquisition predictably or profitably. ROAS was below profitability and CAC was unsustainable.</p>
+            </div>
+            <div class="case-col">
+              <h4>Growth Strategy</h4>
+              <ul>
+                <li>Defined customer personas and built dedicated acquisition funnels</li>
+                <li>Developed full-funnel Meta and Google paid acquisition</li>
+                <li>Introduced remarketing and retargeting across all channels</li>
+                <li>Adopted UGC early to improve ad creative performance</li>
+                <li>Implemented attribution tracking and structured creative testing</li>
+                <li>Optimized interest and lookalike audiences continuously</li>
+                <li>Built lifecycle email and SMS to maximize LTV alongside acquisition</li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-impact">
+            <div class="ci"><div class="ci-n">7x+</div><div class="ci-l">ROAS achieved</div></div>
+            <div class="ci"><div class="ci-n">3x</div><div class="ci-l">ROAS improvement in first 90 days</div></div>
+            <div class="ci"><div class="ci-n">30%</div><div class="ci-l">CAC reduction</div></div>
+            <div class="ci"><div class="ci-n">44%</div><div class="ci-l">Email &amp; SMS revenue YoY</div></div>
+          </div>
+          <div class="case-tools">
+            <h4>Tools &amp; Platforms</h4>
+            <div class="tool-pills">
+              <span class="tool-pill">Meta Ads</span><span class="tool-pill">Google Ads</span><span class="tool-pill">GA4</span><span class="tool-pill">Meta Pixel</span><span class="tool-pill">Google Tag Manager</span><span class="tool-pill">Klaviyo</span><span class="tool-pill">UTM Tracking</span>
+            </div>
+          </div>
+          <div class="case-takeaway">
+            <p>Predictable growth comes from disciplined systems, measurement and continuous experimentation &mdash; not individual campaigns.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 4 -->
+    <div class="case-item" id="c4">
+      <div class="case-head" onclick="toggleCase('c4')">
+        <div class="case-head-left">
+          <div class="case-cat">Customer Experience</div>
+          <h3>Optimizing the Digital Buying Journey</h3>
+        </div>
+        <div class="case-chevron">+</div>
+      </div>
+      <div class="case-body">
+        <div class="case-body-inner">
+          <div class="case-cols">
+            <div class="case-col">
+              <h4>Business Challenge</h4>
+              <p>As paid acquisition improved, website conversion became the primary growth constraint. The objective shifted from acquiring more traffic to converting more of the visitors already arriving &mdash; improving both immediate conversion rates and long-term customer relationships.</p>
+            </div>
+            <div class="case-col">
+              <h4>Customer Experience Strategy</h4>
+              <ul>
+                <li>Redesigned premium Product Detail Pages with stronger storytelling</li>
+                <li>Expanded product education and trust signals throughout the journey</li>
+                <li>Added curated UGC and customer reviews at key decision points</li>
+                <li>Implemented email capture to generate micro-conversions</li>
+                <li>Built lifecycle email nurture to improve post-visit conversion</li>
+                <li>Used Hotjar heatmaps to identify and eliminate friction</li>
+                <li>A/B tested checkout flow and established ongoing CRO process</li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-impact">
+            <div class="ci"><div class="ci-n">23%</div><div class="ci-l">Conversion rate increase</div></div>
+            <div class="ci"><div class="ci-n">40%</div><div class="ci-l">Email lead generation increase</div></div>
+            <div class="ci"><div class="ci-n">12%</div><div class="ci-l">Email revenue increase</div></div>
+            <div class="ci"><div class="ci-n">&#10003;</div><div class="ci-l">Continuous CRO framework</div></div>
+          </div>
+          <div class="case-tools">
+            <h4>Tools &amp; Platforms</h4>
+            <div class="tool-pills">
+              <span class="tool-pill">Shopify</span><span class="tool-pill">GA4</span><span class="tool-pill">Hotjar</span><span class="tool-pill">Klaviyo</span><span class="tool-pill">A/B Testing</span><span class="tool-pill">UGC</span><span class="tool-pill">Product Reviews</span>
+            </div>
+          </div>
+          <div class="case-takeaway">
+            <p>Every visitor should leave more valuable than when they arrived. Great ecommerce experiences maximize both immediate conversions and future customer relationships.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 5 -->
+    <div class="case-item" id="c5">
+      <div class="case-head" onclick="toggleCase('c5')">
+        <div class="case-head-left">
+          <div class="case-cat">Systems &amp; Technology</div>
+          <h3>Building the Technology Foundation for Scale</h3>
+        </div>
+        <div class="case-chevron">+</div>
+      </div>
+      <div class="case-body">
+        <div class="case-body-inner">
+          <div class="case-cols">
+            <div class="case-col">
+              <h4>Business Challenge</h4>
+              <p>Shopify enabled rapid launch but could not support increasingly complex products or backend fulfillment workflows as the business scaled. Growth was beginning to outpace the technology foundation that supported it.</p>
             </div>
             <div class="case-col">
               <h4>Transformation Strategy</h4>
-              <p style="font-size:0.82rem; color:var(--ink-3); font-style:italic;">Full case study coming soon.</p>
+              <ul>
+                <li>Validated Shopify thoroughly before investing in custom development</li>
+                <li>Identified platform limitations as the business matured</li>
+                <li>Led a complete platform rearchitecture and replatform</li>
+                <li>Expanded the internal development team from one to three engineers</li>
+                <li>Built an integrated OMS, CRM, ERP, CMS and business dashboard ecosystem</li>
+                <li>Developed a custom product configurator for complex products</li>
+                <li>Streamlined fulfillment workflows across departments</li>
+              </ul>
             </div>
           </div>
-          <div class="case-results">
-            <div class="cr"><div class="cr-n">&#8593;</div><div class="cr-l">Operational Visibility</div></div>
-            <div class="cr"><div class="cr-n">&#8595;</div><div class="cr-l">Manual Processing</div></div>
-            <div class="cr"><div class="cr-n">&#10003;</div><div class="cr-l">Replatform Delivered</div></div>
-            <div class="cr"><div class="cr-n">3</div><div class="cr-l">Engineers Led</div></div>
+          <div class="case-impact">
+            <div class="ci"><div class="ci-n">&#10003;</div><div class="ci-l">Full replatform delivered</div></div>
+            <div class="ci"><div class="ci-n">3</div><div class="ci-l">Engineers built and led</div></div>
+            <div class="ci"><div class="ci-n">&#8593;</div><div class="ci-l">Conversion &amp; efficiency</div></div>
+            <div class="ci"><div class="ci-n">&#8595;</div><div class="ci-l">Operational friction</div></div>
           </div>
-          <p class="case-lesson">Technology creates leverage when development priorities are aligned directly with business outcomes. The product owner role exists at that intersection.</p>
+          <div class="case-tools">
+            <h4>Tools &amp; Platforms</h4>
+            <div class="tool-pills">
+              <span class="tool-pill">Shopify</span><span class="tool-pill">Custom Platform</span><span class="tool-pill">OMS</span><span class="tool-pill">ERP</span><span class="tool-pill">CRM</span><span class="tool-pill">CMS</span><span class="tool-pill">APIs</span><span class="tool-pill">Product Configurator</span>
+            </div>
+          </div>
+          <div class="case-takeaway">
+            <p>Technology should support business strategy &mdash; not define it. The right platform removes friction for both customers and internal teams.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -574,47 +714,7 @@
   </div>
 </section>
 
-<!-- PHILOSOPHY — WHITE -->
-<section id="philosophy">
-  <div class="phil-inner container">
-    <div class="phil-hdr">
-      <div class="section-label">Operating Philosophy</div>
-      <h2>My Business Operating System</h2>
-    </div>
-    <p style="font-size:0.975rem; color:var(--ink-2); line-height:1.8; max-width:640px; margin-bottom:3rem; font-weight:300;">Every business problem eventually traces back to one of three layers: People, Systems, or Culture. Sustainable growth happens when all three reinforce one another. Ignore one layer, and the business will eventually break &mdash; even if the other two are strong.</p>
-
-    <div class="phil-item">
-      <div class="phil-n">01</div>
-      <div>
-        <p class="phil-q">People</p>
-        <p class="phil-p">Every business starts with people. The right talent creates momentum. The wrong talent creates friction. My first priority is ensuring teams have the right people, clear ownership, accountability, and the ability to succeed.</p>
-      </div>
-    </div>
-    <div class="phil-item">
-      <div class="phil-n">02</div>
-      <div>
-        <p class="phil-q">Systems</p>
-        <p class="phil-p">Great people should not have to rely on heroics to produce great results. Systems create consistency, remove friction, and allow organizations to scale without burning out the people inside them.</p>
-      </div>
-    </div>
-    <div class="phil-item">
-      <div class="phil-n">03</div>
-      <div>
-        <p class="phil-q">Culture</p>
-        <p class="phil-p">Culture is not what you write on the wall &mdash; it is the behaviors your systems reinforce every day. The right culture creates accountability, continuous improvement, ownership, and long-term resilience.</p>
-      </div>
-    </div>
-    <div class="phil-item">
-      <div class="phil-n">04</div>
-      <div>
-        <p class="phil-q">Sustainable Profitability</p>
-        <p class="phil-p">When People, Systems, and Culture reinforce one another, sustainable profitability becomes the outcome &mdash; not the objective. Most organizations try to solve business problems by fixing only one layer. Lasting businesses are built when all three work together.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE — GRAY -->
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="exp-inner container">
     <div class="exp-hdr">
@@ -674,7 +774,7 @@
   </div>
 </section>
 
-<!-- CONTACT — DARK -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
     <div class="contact-label">Contact</div>
@@ -689,7 +789,7 @@
 </section>
 
 <footer>
-  <p>&copy; 2026 Affan Akheel</p>
+  <p>&copy; 2026 Affan Akheel &middot; affanakheel.com</p>
 </footer>
 
 <script>
@@ -726,7 +826,28 @@
       chev.textContent = "x";
     }
   }
-</script>
+
+  function toggleMenu() {
+    const menu = document.getElementById("navMobile");
+    menu.classList.toggle("open");
+  }
+  function closeMenu() {
+    const menu = document.getElementById("navMobile");
+    menu.classList.remove("open");
+  }
+  const mobLinks = document.querySelectorAll(".nav-mobile a");
+  const obs2 = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        mobLinks.forEach(a => a.classList.remove("mob-active"));
+        const active = document.querySelector(".nav-mobile a[href='#" + e.target.id + "']");
+        if (active) active.classList.add("mob-active");
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => obs2.observe(s));
+  // Sync mobile active state with scroll
+  </script>
 
 </body>
 </html>
