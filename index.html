@@ -112,16 +112,16 @@
     .op-inner { max-width: var(--max); margin: 0 auto; }
     .op-eyebrow { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
     .op-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.5rem); color: #fff; margin-bottom: 1rem; line-height: 1.15; }
-    .op-intro { font-size: 1rem; color: rgba(255,255,255,0.55); line-height: 1.75; max-width: var(--prose); margin-bottom: 3.5rem; }
+    .op-intro { font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.75; max-width: var(--prose); margin-bottom: 3.5rem; }
     .op-levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .op-level { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 2rem; }
-    .op-level-num { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
-    .op-level h3 { font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 1.25rem; padding-bottom: 0.875rem; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .op-metric { font-size: 0.82rem; color: rgba(255,255,255,0.55); padding: 0.3rem 0; display: flex; align-items: flex-start; gap: 0.5rem; }
-    .op-metric::before { content: "\2022"; color: var(--accent); flex-shrink: 0; }
+    .op-level { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 2rem; }
+    .op-level-num { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.5rem; }
+    .op-level h3 { font-size: 1rem; font-weight: 600; color: #fff; margin-bottom: 1.25rem; padding-bottom: 0.875rem; border-bottom: 1px solid rgba(255,255,255,0.15); }
+    .op-metric { font-size: 0.85rem; color: rgba(255,255,255,0.82); padding: 0.35rem 0; display: flex; align-items: flex-start; gap: 0.5rem; }
+    .op-metric::before { content: "\2022"; color: rgba(255,255,255,0.4); flex-shrink: 0; }
     .op-footer { margin-top: 2.5rem; padding: 1.5rem 2rem; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; }
-    .op-footer p { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 1.72; max-width: var(--prose); }
-    .op-footer strong { color: rgba(255,255,255,0.8); font-weight: 500; }
+    .op-footer p { font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.72; max-width: var(--prose); }
+    .op-footer strong { color: #fff; font-weight: 600; }
 
     /* CASE STUDIES — gray */
     #cases { background: var(--bg); padding: 7rem 2rem; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
@@ -138,21 +138,21 @@
     .case-chevron { width: 28px; height: 28px; border: 1.5px solid var(--rule); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: transform 0.2s, border-color 0.15s; color: var(--ink-3); font-size: 1rem; }
     .case-item.open .case-chevron { transform: rotate(45deg); border-color: var(--accent); color: var(--accent); }
     .case-body { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
-    .case-body-inner { padding: 0 2rem 2.5rem; border-top: 1px solid var(--rule); }
+    .case-body-inner { padding: 0 2.5rem 3rem; border-top: 1px solid var(--rule); }
 
     /* Inside case — two column */
-    .case-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; padding-top: 2rem; margin-bottom: 2rem; }
+    .case-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding-top: 2.5rem; margin-bottom: 2.5rem; }
     .case-col h4 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.875rem; }
-    .case-col p { font-size: 0.9rem; color: var(--ink-2); line-height: 1.75; max-width: var(--prose); }
+    .case-col p { font-size: 0.9rem; color: var(--ink-2); line-height: 1.8; max-width: 54ch; }
     .case-col ul { list-style: none; padding: 0; }
-    .case-col ul li { font-size: 0.9rem; color: var(--ink-2); line-height: 1.7; padding-left: 1.25rem; position: relative; margin-bottom: 0.4rem; }
+    .case-col ul li { font-size: 0.9rem; color: var(--ink-2); line-height: 1.75; padding-left: 1.25rem; position: relative; margin-bottom: 0.5rem; }
     .case-col ul li::before { content: "\2192"; position: absolute; left: 0; color: var(--accent); font-size: 0.78rem; top: 3px; }
 
     /* Impact row */
     .case-impact { display: flex; gap: 0; padding: 1.75rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-bottom: 1.75rem; flex-wrap: wrap; }
     .ci { flex: 1; min-width: 100px; padding-right: 1.5rem; border-right: 1px solid var(--rule); margin-right: 1.5rem; }
     .ci:last-child { border-right: none; margin-right: 0; padding-right: 0; }
-    .ci-n { font-family: var(--serif); font-size: 1.85rem; line-height: 1; color: var(--ink); margin-bottom: 0.3rem; }
+    .ci-n { font-family: var(--serif); font-size: 2.1rem; line-height: 1; color: var(--ink); margin-bottom: 0.35rem; }
     .ci-l { font-size: 0.72rem; font-weight: 500; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.4; }
 
     /* Tools row */
@@ -257,6 +257,15 @@
       .nav-hamburger { display: flex; }
       .nav-links { display: none !important; }
     }
+
+    .case-preview {
+      font-size: 0.82rem;
+      color: var(--ink-3);
+      margin-top: 0.35rem;
+      line-height: 1.5;
+      max-width: 580px;
+    }
+    .case-item.open .case-preview { display: none; }
   </style>
 </head>
 <body>
@@ -272,9 +281,10 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#philosophy">Philosophy</a></li>
-      <li><a href="#operating">Operating System</a></li>
+      <li><a href="#operating">How I Run eCommerce</a></li>
       <li><a href="#cases">Case Studies</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#whatibuild">What I Build</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
@@ -286,9 +296,10 @@
     <ul>
       <li><a href="#about" onclick="closeMenu()">About</a></li>
       <li><a href="#philosophy" onclick="closeMenu()">Philosophy</a></li>
-      <li><a href="#operating" onclick="closeMenu()">Operating System</a></li>
+      <li><a href="#operating" onclick="closeMenu()">How I Run eCommerce</a></li>
       <li><a href="#cases" onclick="closeMenu()">Case Studies</a></li>
       <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+      <li><a href="#whatibuild" onclick="closeMenu()">What I Build</a></li>
       <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
     </ul>
   </div>
@@ -301,13 +312,13 @@
       <div class="hero-label">eCommerce &amp; Growth Leader</div>
       <h1 class="hero-headline">
         <span class="break">Growth.</span>
-        <span class="break">Operations.</span>
-        <span class="break">Systems.</span>
+        <span class="break">eCommerce.</span>
+        <span class="break">Leadership.</span>
         <span class="owner">One owner.</span>
       </h1>
-      <p class="hero-tagline">I build profitable ecommerce businesses by aligning commercial strategy, marketing, systems, operations and leadership.</p>
+      <p class="hero-tagline">I build high-performing ecommerce businesses by aligning commercial strategy, growth marketing, digital experience, technology and operations.</p>
       <div class="hero-buttons">
-        <a href="#contact" class="btn btn-solid">Get in touch</a>
+        <a href="#contact" class="btn btn-solid">Let's Talk</a>
         <a href="#cases" class="btn btn-outline">See case studies</a>
       </div>
       <div class="hero-stats">
@@ -328,12 +339,12 @@
     <span class="glance-label">Specialties</span>
     <div class="glance-tags">
       <span class="glance-tag">eCommerce Strategy</span>
-      <span class="glance-tag">Revenue &amp; P&amp;L Ownership</span>
       <span class="glance-tag">Performance Marketing</span>
-      <span class="glance-tag">Operations Leadership</span>
-      <span class="glance-tag">Platform &amp; Technology</span>
-      <span class="glance-tag">Team Building</span>
-      <span class="glance-tag">International Expansion</span>
+      <span class="glance-tag">Growth & P&amp;L Ownership</span>
+      <span class="glance-tag">Customer Experience & CRO</span>
+      <span class="glance-tag">Lifecycle Marketing</span>
+      <span class="glance-tag">Operations &amp; Technology</span>
+      <span class="glance-tag">Team Leadership</span>
     </div>
   </div>
 </div>
@@ -344,12 +355,12 @@
     <div class="about-text">
       <div class="section-label">About</div>
       <h2 class="about-title">Operator. Builder. Integrator.</h2>
-      <p>I&apos;m a Las Vegas-based eCommerce and growth leader with 8 years of experience building DTC businesses from the ground up. My background sits at the intersection of <strong>commercial strategy, marketing, operations, and technology</strong> &mdash; I don&apos;t run one department. I own the business.</p>
+      <p>I&apos;m a Las Vegas-based eCommerce and growth leader with 8 years of experience building and scaling DTC businesses. My background is unusual because I sit at the intersection of <strong>performance marketing, eCommerce strategy, customer experience, and operations</strong> &mdash; I don&apos;t run one channel. I own the commercial outcome.</p>
       <p>At Uniworld Omniport, I serve as Director of eCommerce and product owner of a custom-built platform, managing engineers while owning the P&amp;L, marketing, operations, supply chain, and international expansion simultaneously.</p>
       <p>I launched Game Theory Tables from zero to seven figures in under two years. I stepped in to lead the operations team through a critical turnaround &mdash; shipping $2M+ of orders in 90 days. I&apos;ve built teams, systems, and growth engines from scratch across every function of the business.</p>
       <p>MBA in Marketing. MS in Engineering Management. Background in electronics engineering. Equally comfortable in a strategy meeting, a development sprint, and a warehouse floor.</p>
       <div class="about-quote">
-        <p>&ldquo;I build profitable ecommerce businesses by aligning commercial strategy, marketing, systems, operations and leadership around one shared objective: sustainable growth.&rdquo;</p>
+        <p>&ldquo;Marketing drives growth. Operations sustains it. Technology scales it. My job is to make all three work together.&rdquo;</p>
       </div>
     </div>
     <div class="about-right">
@@ -368,7 +379,7 @@
       <div class="side-block">
         <h3>Tools &amp; Platforms</h3>
         <div class="tags">
-          <span class="tag">Shopify / Shopify Plus</span>
+          <span class="tag">Shopify</span>
           <span class="tag">Custom Platform</span>
           <span class="tag">ERP / CMS</span>
           <span class="tag">Klaviyo</span>
@@ -421,8 +432,8 @@
 <!-- OPERATING SYSTEM -->
 <section id="operating">
   <div class="op-inner container">
-    <div class="op-eyebrow">How I Run an eCommerce Business</div>
-    <h2 class="op-title">A Three-Level Operating Dashboard</h2>
+    <div class="op-eyebrow">My Operating Framework</div>
+    <h2 class="op-title">How I Run an Ecommerce Business</h2>
     <p class="op-intro">Growing an ecommerce business isn&apos;t about managing Marketing, Operations, Technology and Customer Experience independently. It&apos;s about aligning every department around one objective: profitable growth. I use a three-level dashboard framework to create visibility, accountability and alignment across the entire business.</p>
     <div class="op-levels">
       <div class="op-level">
@@ -468,7 +479,7 @@
     <div class="cases-hdr">
       <div class="section-label">Business Case Studies</div>
       <h2>How I solve business problems.</h2>
-      <p>Five engagements across commercial strategy, leadership, growth, customer experience, and systems.</p>
+      <p>Five engagements across commercial strategy, growth, customer experience, leadership, and systems.</p>
     </div>
 
     <!-- CASE 1 -->
@@ -477,6 +488,7 @@
         <div class="case-head-left">
           <div class="case-cat">Commercial Strategy</div>
           <h3>From Product Concept to Multi-Million Dollar Business</h3>
+          <p class="case-preview">How we validated demand before scaling investment &mdash; from 50 units to a $3M+ DTC brand.</p>
         </div>
         <div class="case-chevron">+</div>
       </div>
@@ -523,56 +535,9 @@
     <div class="case-item" id="c2">
       <div class="case-head" onclick="toggleCase('c2')">
         <div class="case-head-left">
-          <div class="case-cat">Leadership</div>
-          <h3>Rebuilding Operations for Scale</h3>
-        </div>
-        <div class="case-chevron">+</div>
-      </div>
-      <div class="case-body">
-        <div class="case-body-inner">
-          <div class="case-cols">
-            <div class="case-col">
-              <h4>Business Challenge</h4>
-              <p>Inherited an underperforming operations team during the company&apos;s most important fulfillment period. More than $2M in orders needed to ship within 90 days. Failure would have jeopardized year-end profitability. The Operations Manager had been let go, leaving a seven-person team without leadership, processes, goals, or accountability.</p>
-            </div>
-            <div class="case-col">
-              <h4>Leadership Approach</h4>
-              <ul>
-                <li>Evaluated people, processes and bottlenecks before making changes</li>
-                <li>Established goals, accountability and clear ownership immediately</li>
-                <li>Introduced repeatable workflows and daily operating rhythms</li>
-                <li>Implemented KPI scorecards tied directly to business outcomes</li>
-                <li>Created performance incentives aligned to the shipment target</li>
-                <li>Rebuilt team culture around ownership and execution</li>
-                <li>Simultaneously planned the long-term organizational rebuild</li>
-              </ul>
-            </div>
-          </div>
-          <div class="case-impact">
-            <div class="ci"><div class="ci-n">$2M+</div><div class="ci-l">Orders fulfilled in 90 days</div></div>
-            <div class="ci"><div class="ci-n">99%</div><div class="ci-l">On-time delivery</div></div>
-            <div class="ci"><div class="ci-n">98%</div><div class="ci-l">Order accuracy</div></div>
-            <div class="ci"><div class="ci-n">$0</div><div class="ci-l">Year-end losses avoided</div></div>
-          </div>
-          <div class="case-tools">
-            <h4>Tools &amp; Platforms</h4>
-            <div class="tool-pills">
-              <span class="tool-pill">ERP</span><span class="tool-pill">Dashboards</span><span class="tool-pill">Inventory Systems</span><span class="tool-pill">KPI Scorecards</span><span class="tool-pill">SOPs</span>
-            </div>
-          </div>
-          <div class="case-takeaway">
-            <p>Operations problems are rarely process problems alone. Sustainable performance comes from aligning people, systems and culture around a shared objective.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CASE 3 -->
-    <div class="case-item" id="c3">
-      <div class="case-head" onclick="toggleCase('c3')">
-        <div class="case-head-left">
           <div class="case-cat">Growth Strategy</div>
           <h3>Building a Predictable Growth Engine</h3>
+          <p class="case-preview">Turning around an underperforming ops team under financial pressure &mdash; $2M+ fulfilled in 90 days.</p>
         </div>
         <div class="case-chevron">+</div>
       </div>
@@ -616,11 +581,12 @@
     </div>
 
     <!-- CASE 4 -->
-    <div class="case-item" id="c4">
-      <div class="case-head" onclick="toggleCase('c4')">
+    <div class="case-item" id="c3">
+      <div class="case-head" onclick="toggleCase('c3')">
         <div class="case-head-left">
           <div class="case-cat">Customer Experience</div>
           <h3>Optimizing the Digital Buying Journey</h3>
+          <p class="case-preview">Turning around an underperforming ops team under financial pressure &mdash; $2M+ fulfilled in 90 days.</p>
         </div>
         <div class="case-chevron">+</div>
       </div>
@@ -664,11 +630,61 @@
     </div>
 
     <!-- CASE 5 -->
+    <div class="case-item" id="c4">
+      <div class="case-head" onclick="toggleCase('c4')">
+        <div class="case-head-left">
+          <div class="case-cat">Leadership</div>
+          <h3>Rebuilding Operations for Scale</h3>
+          <p class="case-preview">Turning around an underperforming ops team under financial pressure &mdash; $2M+ fulfilled in 90 days.</p>
+        </div>
+        <div class="case-chevron">+</div>
+      </div>
+      <div class="case-body">
+        <div class="case-body-inner">
+          <div class="case-cols">
+            <div class="case-col">
+              <h4>Business Challenge</h4>
+              <p>Inherited an underperforming operations team during the company&apos;s most important fulfillment period. More than $2M in orders needed to ship within 90 days. Failure would have jeopardized year-end profitability. The Operations Manager had been let go, leaving a seven-person team without leadership, processes, goals, or accountability.</p>
+            </div>
+            <div class="case-col">
+              <h4>Leadership Approach</h4>
+              <ul>
+                <li>Evaluated people, processes and bottlenecks before making changes</li>
+                <li>Established goals, accountability and clear ownership immediately</li>
+                <li>Introduced repeatable workflows and daily operating rhythms</li>
+                <li>Implemented KPI scorecards tied directly to business outcomes</li>
+                <li>Created performance incentives aligned to the shipment target</li>
+                <li>Rebuilt team culture around ownership and execution</li>
+                <li>Simultaneously planned the long-term organizational rebuild</li>
+              </ul>
+            </div>
+          </div>
+          <div class="case-impact">
+            <div class="ci"><div class="ci-n">$2M+</div><div class="ci-l">Orders fulfilled in 90 days</div></div>
+            <div class="ci"><div class="ci-n">99%</div><div class="ci-l">On-time delivery</div></div>
+            <div class="ci"><div class="ci-n">98%</div><div class="ci-l">Order accuracy</div></div>
+            <div class="ci"><div class="ci-n">$0</div><div class="ci-l">Year-end losses avoided</div></div>
+          </div>
+          <div class="case-tools">
+            <h4>Tools &amp; Platforms</h4>
+            <div class="tool-pills">
+              <span class="tool-pill">ERP</span><span class="tool-pill">Dashboards</span><span class="tool-pill">Inventory Systems</span><span class="tool-pill">KPI Scorecards</span><span class="tool-pill">SOPs</span>
+            </div>
+          </div>
+          <div class="case-takeaway">
+            <p>Operations problems are rarely process problems alone. Sustainable performance comes from aligning people, systems and culture around a shared objective.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CASE 3 -->
     <div class="case-item" id="c5">
       <div class="case-head" onclick="toggleCase('c5')">
         <div class="case-head-left">
           <div class="case-cat">Systems &amp; Technology</div>
           <h3>Building the Technology Foundation for Scale</h3>
+          <p class="case-preview">Replatforming from Shopify to a custom ecosystem &mdash; OMS, ERP, CRM, CMS and a 3-engineer dev team.</p>
         </div>
         <div class="case-chevron">+</div>
       </div>
@@ -770,6 +786,38 @@
         MS, Engineering Management &mdash; International Technological University<br>
         BE, Electronics &amp; Communications &mdash; Anna University
       </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT I BUILD -->
+<section id="whatibuild" style="background:var(--bg);padding:7rem 2rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);">
+  <div class="container">
+    <div class="section-label">What I Build</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.75rem,3vw,2.5rem);color:var(--ink);line-height:1.15;margin-bottom:1rem;">The full picture.</h2>
+    <p style="font-size:1rem;color:var(--ink-3);max-width:540px;margin-bottom:3.5rem;">Every role I&apos;ve targeted involves the same pattern &mdash; own a P&amp;L, build systems, lead teams, drive growth. Here&apos;s how that translates into practice.</p>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:var(--white);">
+      <div style="padding:2rem 1.75rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;">01</div>
+        <div style="font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;">Growth &amp; Performance Marketing</div>
+        <div style="font-size:0.85rem;color:var(--ink-2);line-height:1.65;">Paid acquisition, SEO/GEO, lifecycle marketing, CRO, attribution, and omnichannel growth strategy tied directly to P&amp;L.</div>
+      </div>
+      <div style="padding:2rem 1.75rem;border-bottom:1px solid var(--rule);">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;">02</div>
+        <div style="font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;">eCommerce &amp; Customer Experience</div>
+        <div style="font-size:0.85rem;color:var(--ink-2);line-height:1.65;">Site merchandising, conversion optimization, A/B testing, product pages, checkout flow, and the full digital buying journey.</div>
+      </div>
+      <div style="padding:2rem 1.75rem;border-right:1px solid var(--rule);">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;">03</div>
+        <div style="font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;">Operations &amp; Fulfillment</div>
+        <div style="font-size:0.85rem;color:var(--ink-2);line-height:1.65;">A differentiator most eCommerce leaders don't have. Warehouse ops, 3PL management, supply chain, international shipping, and 99% fulfillment accuracy.</div>
+      </div>
+      <div style="padding:2rem 1.75rem;">
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;">04</div>
+        <div style="font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;">Technology &amp; Systems</div>
+        <div style="font-size:0.85rem;color:var(--ink-2);line-height:1.65;">Another differentiator. Custom platform ownership, ERP integration, dev team leadership, and AI implementation across marketing and operations.</div>
+      </div>
     </div>
   </div>
 </section>
